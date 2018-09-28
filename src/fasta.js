@@ -33,7 +33,7 @@ export default Fasta = {
         let label = line.slice(1).trim();
         // extract IDs and push them to the meta dict
         let obj = getMeta(label.trim());
-        label = obj.name;
+        // label = obj.name; // Commented out (CZ 18/09/27)
         let id = obj.id || seqs.length;
         var currentSeq = new st.model( "", obj.name, id );
         currentSeq.ids = obj.ids || {};
