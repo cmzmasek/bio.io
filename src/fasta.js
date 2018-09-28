@@ -35,7 +35,8 @@ export default Fasta = {
         let obj = getMeta(label.trim());
         // label = obj.name; // Commented out (CZ 18/09/27)
         let id = obj.id || seqs.length;
-        var currentSeq = new st.model( "", obj.name, id );
+        // var currentSeq = new st.model( "", obj.name, id );
+        var currentSeq = new st.model( "", label, id ); // Changed (CZ 18/09/27)
         currentSeq.ids = obj.ids || {};
         currentSeq.details = obj.details || {};
         seqs.push(currentSeq);
